@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "EditCourse";
+}
+
+<h2>Edit Course</h2>
+
+<form action="/Home/SaveCourseUpdates" method="post">
+    <input type="hidden" name="Id" value="@ViewBag.ThisCourse.Id" /><br /><br />
+    <input type="text" name="Name" value="@ViewBag.ThisCourse.Name" placeholder="@ViewBag.ThisCourse.Name"/><br /><br />
+    <input type="text" name="Category" value="@ViewBag.ThisCourse.Category" placeholder="@ViewBag.ThisCourse.Category" /><br /><br />
+    <input type="submit" value="Save Changes"/>
+</form>
+

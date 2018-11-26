@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "ListOfStudents";
+}
+
+<h2>List OfStudents</h2>
+
+<table class="table">
+    <tr>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+        <th>Update</th>
+        <th>Delete</th>
+        <th>This Student's Courses</th>
+    </tr>
+    @foreach (var student in ViewBag.StudentList)
+    {
+        <tr>
+            <td>@student.FirstName</td>
+            <td>@student.LastName</td>
+            <td>@student.Phone</td>
+            <td>@student.Address</td>
+            <td><a href="/Home/EditStudent?Id=@student.Id"class="btn-sm">Edit</a></td>
+            <td><a href="/Home/DeleteStudent?Id=@student.Id" onclick="return confirm('Are you sure you want to delete this student?')" class="btn-danger btn-sm" name="delete">Delete</a></td>
+            <td>@*ToDo: List Courses*@</td>
+        </tr>
+    }
+</table><br /><br />
+<a href="/Home/AddStudent">Add a New Student</a><br /><br />
+<a href="/Home/AddCourse">Add a New Course</a>

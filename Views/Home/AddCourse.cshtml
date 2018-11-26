@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "AddCourse";
+}
+
+<h2>Add Course</h2>
+
+<form action="/Home/SaveNewCourse" method="post">
+    <input type="hidden" name="Id" /><br /><br />
+    <input type="text" name="Name" placeholder="Name"/><br /><br />
+    <input type="text" name="Category" placeholder="Category" /><br /><br />
+    <input type="submit" class="btn-primary" value="Add New Course"/>
+    <input type="reset"/>
+
+</form>
